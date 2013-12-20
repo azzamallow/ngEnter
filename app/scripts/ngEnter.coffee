@@ -4,7 +4,11 @@ angular.module 'ngEnter', []
 
 angular.module('ngEnter')
   .directive 'ngEnter', ->
-    template: '<div></div>'
-    restrict: 'E'
-    link: (scope, element, attrs) ->
-      element.text 'this is the ngEnter directive'
+    (scope, element, attrs) ->
+      element.bind 'keydown keypress', (event) ->
+        return if event.which != 13
+
+        scope.$apply ->
+          scope.$eval attrs.ngEnter
+        
+        event.preventDefault()
