@@ -1,6 +1,7 @@
 {
   "name": "ng-enter",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "main": "dist/ngEnter.js",
   "dependencies": {
     "angular": "1.2.4",
     "json3": "~3.2.4",
