@@ -15,6 +15,15 @@ bower install ngEnter
 usage
 -----
 
+Make sure you include the module in your application config
+
+```
+angular.module('myApp', [
+  'ngEnter',
+  ...
+]);
+```
+
 ```
 <input ng-enter="modelValue = 'enter pressed'"></input>
 ```
